@@ -63,21 +63,21 @@
             bindings = <
 &trans  &trans
 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-                &trans          &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DOWN  &kp UP     &trans  &trans
+                &trans          &trans  &trans    &trans    &trans
             >;
         };
 
         layer2 {
             bindings = <
-&trans  &trans
-&trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-                &trans          &trans  &trans    &trans  &trans
+&trans           &trans
+&trans           &trans           &trans           &trans           &trans
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp UNDERSCORE    &kp UNDERSCORE  &kp MINUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp COLON         &kp SEMICOLON   &kp AT      &kp HASH           &kp BACKSLASH
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp CARET         &kp COMMA       &kp PERIOD  &kp DOLLAR         &kp GRAVE
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans            &trans          &trans
             >;
         };
 
