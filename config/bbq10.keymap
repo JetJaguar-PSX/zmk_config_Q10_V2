@@ -63,10 +63,10 @@
             bindings = <
 &trans  &trans
 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp END    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOWN  &kp UP     &trans  &trans
-                &trans          &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME  &kp END    &kp LS(LT)  &kp LS(GT)
+&trans  &trans  &trans  &trans  &kp LBKT      &kp RBKT        &kp LEFT  &kp RIGHT  &trans      &trans
+&trans  &trans  &trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN  &kp UP     &trans      &trans
+                &trans          &trans        &trans          &trans    &trans
             >;
         };
 
