@@ -62,9 +62,9 @@
             bindings = <
 &trans         &trans
 &trans         &trans         &trans          &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME  &kp END    &kp LS(LT)     &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3  &kp LBKT      &kp RBKT        &kp LEFT  &kp RIGHT  &kp PAGE_UP    &kp BSLH
-&none          &bootloader    &bt BT_CLR_ALL  &bt BT_CLR     &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN  &kp UP     &kp PAGE_DOWN  &kp GRAVE
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME  &kp END    &kp LS(LT)   &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3  &kp LBKT      &kp RBKT        &kp LEFT  &kp RIGHT  &kp TAB      &kp BSLH
+&none          &bootloader    &bt BT_CLR_ALL  &bt BT_CLR     &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN  &kp UP     &kp LS(TAB)  &kp GRAVE
                               &trans                         &trans        &trans          &trans    &trans
             >;
         };
