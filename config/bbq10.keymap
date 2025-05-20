@@ -6,7 +6,6 @@
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -61,12 +60,12 @@
 
         layer1 {
             bindings = <
-&trans  &trans
-&trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME  &kp END    &kp LS(LT)  &kp LS(GT)
-&trans  &trans  &trans  &trans  &kp LBKT      &kp RBKT        &kp LEFT  &kp RIGHT  &trans      &trans
-&trans  &trans  &trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN  &kp UP     &trans      &trans
-                &trans          &trans        &trans          &trans    &trans
+&trans         &trans
+&trans         &trans         &trans          &trans         &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME  &kp END    &kp LS(LT)     &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3  &kp LBKT      &kp RBKT        &kp LEFT  &kp RIGHT  &kp PAGE_UP    &kp BSLH
+&none          &bootloader    &bt BT_CLR_ALL  &bt BT_CLR     &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN  &kp UP     &kp PAGE_DOWN  &kp GRAVE
+                              &trans                         &trans        &trans          &trans    &trans
             >;
         };
 
@@ -74,21 +73,10 @@
             bindings = <
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp UNDERSCORE    &kp UNDERSCORE  &kp MINUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp COLON         &kp SEMICOLON   &kp AT      &kp HASH           &kp BACKSLASH
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp CARET         &kp COMMA       &kp PERIOD  &kp DOLLAR         &kp GRAVE
-                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans            &trans          &trans
-            >;
-        };
-
-        upper_layer {
-            bindings = <
-&msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1    &td0       &bt BT_SEL 2  &bt BT_SEL 3
-&none         &kp UP          &none      &sys_reset    &ext_power EP_TOG  &none                &kp LT      &kp GT    &kp PIPE     &kp EQUAL
-&kp LEFT      &kp DOWN        &kp RIGHT  &none         &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC  &kp CARET    &kp BSPC
-&kp LSHFT     &none           &none      &none         &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &none     &bootloader  &kp ENTER
-                              &kp LCTRL                &kp LALT           &hm OUT_TOG SPACE    &to 3       &to 0
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp UNDERSCORE    &kp UNDERSCORE           &kp MINUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp COLON         &kp SEMICOLON            &kp AT      &kp HASH           &trans
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp CARET         &kp COMMA                &kp PERIOD  &kp DOLLAR         &trans
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans            &kp LANG_ZENKAKUHANKAKU  &trans
             >;
         };
     };
