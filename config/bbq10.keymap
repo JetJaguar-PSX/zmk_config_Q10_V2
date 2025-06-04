@@ -14,6 +14,30 @@
 #define SYM 1
 #define UPPER 2
 
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -61,10 +85,10 @@
             bindings = <
 &trans         &trans
 &trans         &trans          &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp LS(LPAR)  &kp LS(RPAR)    &kp HOME                 &kp END    &kp LS(LT)   &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp LBKT      &kp RBKT        &kp LEFT                 &kp RIGHT  &kp TAB      &kp BSLH
-&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp LS(LBRC)  &kp LS(RBRC)    &kp DOWN                 &kp UP     &kp LS(TAB)  &kp GRAVE
-                               &trans                        &trans        &trans          &kp LANG_ZENKAKUHANKAKU  &trans
+&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN    &kp HOME  &kp END    &kp LS(LT)   &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp LEFT  &kp RIGHT  &kp TAB      &kp JP_YEN
+&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE    &kp DOWN  &kp UP     &kp LS(TAB)  &kp JP_BACKQUOTE
+                               &trans                        &trans        &trans          &kp JP_HANZEN  &kp DELETE
             >;
         };
 
@@ -72,9 +96,9 @@
             bindings = <
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp UNDERSCORE    &kp UNDERSCORE  &kp MINUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp COLON         &kp SEMICOLON   &kp AT      &kp HASH           &trans
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp TILDE         &kp COMMA       &kp PERIOD  &kp DOLLAR         &trans
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS   &kp JP_CARET  &kp JP_UNDERSCORE  &kp MINUS   &kp JP_DQUOTE  &kp JP_QUOTE
+&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp JP_COLON  &kp SEMICOLON      &kp JP_AT   &kp HASH       &trans
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT    &kp JP_TILDE  &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
                                   &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans            &trans          &trans
             >;
         };
