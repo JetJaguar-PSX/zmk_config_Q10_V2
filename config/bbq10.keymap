@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define SYM 1
 #define UPPER 2
@@ -73,10 +74,10 @@
             bindings = <
 &mkp RCLK  &mkp LCLK
 &mkp LCLK  &mkp MCLK  &kp LS(CAPS)  &mt LG(TAB) K_BACK  &mkp RCLK
-&kp Q      &kp W      &kp E         &kp R               &kp T               &kp Y             &kp U             &kp I         &kp O      &kp P
-&kp A      &kp S      &kp D         &kp F               &kp G               &kp H             &kp J             &kp K         &kp L      &kp BACKSPACE
-&tog 1     &kp Z      &kp X         &kp C               &kp V               &kp B             &kp N             &kp M         &kp LCTRL  &kp ENTER
-                      &kt LSHFT                         &lt 3 INT_MUHENKAN  &mt LALT SPACE    &lt 2 INT_HENKAN  &kp LEFT_GUI
+&kp Q      &kp W      &kp E         &kp R               &kp T               &kp Y             &kp U           &kp I         &kp O      &kp P
+&kp A      &kp S      &kp D         &kp F               &kp G               &kp H             &kp J           &kp K         &kp L      &kp BACKSPACE
+&tog 1     &kp Z      &kp X         &kp C               &kp V               &kp B             &kp N           &kp M         &kp LCTRL  &kp ENTER
+                      &kt LSHFT                         &lt 2 INT_MUHENKAN  &mt LALT SPACE    &kp INT_HENKAN  &kp LEFT_GUI
             >;
         };
 
@@ -87,29 +88,18 @@
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp JP_CARET    &kp JP_UNDERSCORE  &kp MINUS   &kp JP_DQUOTE  &kp JP_QUOTE
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_AT   &kp HASH       &trans
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp JP_TILDE    &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
-                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &trans             &trans
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &kp LS(TAB)        &kp TAB
             >;
         };
 
         Action_Layer {
             bindings = <
-&trans  &trans
-&trans  &trans         &trans   &trans       &trans
-&trans  &trans         &kp ESC  &kp LS(TAB)  &kp TAB    &trans    &trans  &trans  &trans  &trans
-&trans  &kp LC(LS(S))  &kp DEL  &trans       &kp PG_UP  &trans    &trans  &trans  &trans  &trans
-&trans  &trans         &trans   &trans       &kp PG_DN  &trans    &trans  &trans  &trans  &trans
-                       &trans                &trans     &trans    &trans  &trans
-            >;
-        };
-
-        BT_Layer {
-            bindings = <
 &trans         &trans
 &trans         &trans          &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME  &kp END    &kp LS(LT)   &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &kp LEFT  &kp RIGHT  &kp TAB      &kp JP_YEN
-&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN  &kp UP     &kp LS(TAB)  &kp JP_BACKQUOTE
-                               &trans                        &trans           &trans             &kp JP_HANZEN  &kp DELETE
+&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME       &kp END     &kp LS(LT)     &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &kp LEFT       &kp RIGHT   &kp DELETE     &kp JP_YEN
+&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN       &kp UP      &kp LS(LG(S))  &kp JP_BACKQUOTE
+                               &trans                        &trans           &trans             &kp JP_HANZEN  &kp ESCAPE
             >;
         };
     };
