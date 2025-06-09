@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define SYM 1
 #define UPPER 2
@@ -71,23 +72,12 @@
 
         default_layer {
             bindings = <
-&mkp RCLK  &mkp LCLK
-&mkp LCLK  &mkp MCLK  &mkp LCLK  &kp LS(CAPS)  &mkp RCLK
-&kp Q      &kp W      &kp E      &kp R         &kp T               &kp Y             &kp U           &kp I         &kp O      &kp P
-&kp A      &kp S      &kp D      &kp F         &kp G               &kp H             &kp J           &kp K         &kp L      &kp BACKSPACE
-&tog 2     &kp Z      &kp X      &kp C         &kp V               &kp B             &kp N           &kp M         &kp LCTRL  &kp ENTER
-                      &kt LSHFT                &lt 1 INT_MUHENKAN  &mt LALT SPACE    &kp INT_HENKAN  &kp LEFT_GUI
-            >;
-        };
-
-        Action_Layer {
-            bindings = <
-&kp LEFT       &kp RIGHT
-&trans         &trans          &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME       &kp END     &kp LS(LT)   &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &kp L          &kp R       &kp TAB      &kp JP_YEN
-&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN       &kp UP      &kp LS(TAB)  &kp JP_BACKQUOTE
-                               &trans                        &trans           &trans             &kp JP_HANZEN  &kp ESCAPE
+&mt LG(TAB) K_BACK  &mkp LCLK
+&mkp LCLK           &mkp MCLK  &mkp LCLK  &kp LS(CAPS)  &mkp RCLK
+&kp Q               &kp W      &kp E      &kp R         &kp T               &kp Y             &kp U           &kp I         &kp O      &kp P
+&kp A               &kp S      &kp D      &kp F         &kp G               &kp H             &kp J           &kp K         &kp L      &kp BACKSPACE
+&tog 1              &kp Z      &kp X      &kp C         &kp V               &kp B             &kp N           &kp M         &kp LCTRL  &kp ENTER
+                               &kt LSHFT                &lt 2 INT_MUHENKAN  &mt LALT SPACE    &kp INT_HENKAN  &kp LEFT_GUI
             >;
         };
 
@@ -99,6 +89,17 @@
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_AT   &kp HASH       &trans
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp JP_TILDE    &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
                                   &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &kp LS(LG(S))      &kp DELETE
+            >;
+        };
+
+        Action_Layer {
+            bindings = <
+&kp LEFT       &kp RIGHT
+&trans         &trans          &trans         &trans         &trans
+&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME       &kp END     &kp LS(LT)   &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &trans         &trans      &kp TAB      &kp JP_YEN
+&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN       &kp UP      &kp LS(TAB)  &kp JP_BACKQUOTE
+                               &trans                        &trans           &trans             &kp JP_HANZEN  &kp ESCAPE
             >;
         };
     };
