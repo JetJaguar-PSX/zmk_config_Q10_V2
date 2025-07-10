@@ -94,7 +94,7 @@
 
         Sub_Layer {
             bindings = <
-&kp LEFT       &kp RIGHT
+&trans         &trans
 &trans         &trans          &trans         &trans         &trans
 &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME       &kp END     &kp LS(LT)   &kp LS(GT)
 &bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &trans         &trans      &kp TAB      &kp JP_YEN
