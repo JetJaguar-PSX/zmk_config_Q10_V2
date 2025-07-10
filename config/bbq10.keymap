@@ -72,12 +72,12 @@
 
         default_layer {
             bindings = <
-&mt LG(TAB) K_BACK  &mkp LCLK
-&mkp LCLK           &mkp MCLK  &mkp LCLK  &kp LS(CAPS)  &mkp RCLK
-&kp Q               &kp W      &kp E      &kp R         &kp T             &kp Y        &kp U           &kp I             &kp O      &kp P
-&kp A               &kp S      &kp D      &kp F         &kp G             &kp H        &kp J           &kp K             &kp L      &kp BACKSPACE
-&tog 1              &kp Z      &kp X      &kp C         &kp V             &kp B        &kp N           &kp M             &kt LCTRL  &kp ENTER
-                               &kt LSHFT                &kp INT_MUHENKAN  &kt SPACE    &kp INT_HENKAN  &mt LEFT_GUI TAB
+&lt 2 LEFT_ARROW    &lt 3 RIGHT_ARROW
+&mt LG(TAB) K_BACK  &mkp MCLK          &mkp LCLK  &kp LS(CAPS)  &mkp RCLK
+&kp Q               &kp W              &kp E      &kp R         &kp T             &kp Y        &kp U           &kp I             &kp O      &kp P
+&kp A               &kp S              &kp D      &kp F         &kp G             &kp H        &kp J           &kp K             &kp L      &kp BACKSPACE
+&tog 1              &kp Z              &kp X      &kp C         &kp V             &kp B        &kp N           &kp M             &kt LCTRL  &kp ENTER
+                                       &kt LSHFT                &kp INT_MUHENKAN  &kt SPACE    &kp INT_HENKAN  &mt LEFT_GUI TAB
             >;
         };
 
@@ -87,12 +87,12 @@
 &trans           &trans           &trans           &trans           &trans
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp JP_CARET    &kp JP_UNDERSCORE  &kp MINUS   &kp JP_DQUOTE  &kp JP_QUOTE
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_AT   &kp HASH       &trans
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DOT       &kp JP_TILDE    &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
-                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &kp LS(LG(S))      &kp DELETE
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCL        &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &kp KP_DOT      &kp LS(LG(S))      &kp DELETE
             >;
         };
 
-        Action_Layer {
+        Sub_Layer {
             bindings = <
 &kp LEFT       &kp RIGHT
 &trans         &trans          &trans         &trans         &trans
@@ -100,6 +100,17 @@
 &bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &trans         &trans      &kp TAB      &kp JP_YEN
 &none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN       &kp UP      &kp LS(TAB)  &kp JP_BACKQUOTE
                                &trans                        &trans           &trans             &kp JP_HANZEN  &kp ESCAPE
+            >;
+        };
+
+        Control_Layer {
+            bindings = <
+&trans          &trans
+&trans          &trans          &trans           &trans            &trans
+&kp HOME        &kp UP_ARROW    &kp END          &trans            &kp LC(LS(ESC))  &trans    &trans  &trans  &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(UP_ARROW)  &kp LC(SLASH)    &trans    &trans  &trans  &trans  &trans
+&none           &kp LS(LG(S))   &trans           &trans            &trans           &trans    &trans  &trans  &trans  &trans
+                                &trans                             &trans           &trans    &trans  &trans
             >;
         };
     };
