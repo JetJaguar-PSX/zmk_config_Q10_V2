@@ -107,10 +107,10 @@
             bindings = <
 &trans          &trans
 &trans          &trans          &trans              &trans              &trans
-&kp HOME        &kp UP_ARROW    &kp END             &none               &kp LC(LS(ESC))      &trans    &trans  &trans  &trans  &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LS(UP_ARROW)    &kp LC(SLASH)        &trans    &trans  &trans  &trans  &trans
-&none           &kp LS(LG(S))   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans    &trans  &trans  &trans  &trans
-                                &trans                                  &trans               &trans    &trans  &trans
+&kp HOME        &kp UP_ARROW    &kp END             &none               &kp LC(LS(ESC))      &trans                     &trans          &trans  &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LS(UP_ARROW)    &kp LC(SLASH)        &kp LANG_ZENKAKUHANKAKU    &trans          &trans  &trans  &trans
+&none           &kp LS(LG(S))   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans                     &kp KP_NUMLOCK  &trans  &trans  &trans
+                                &trans                                  &trans               &trans                     &trans          &trans
             >;
         };
     };
