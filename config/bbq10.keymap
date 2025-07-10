@@ -95,22 +95,22 @@
         Sub_Layer {
             bindings = <
 &trans         &trans
-&trans         &trans          &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &kp JP_LPAREN    &kp JP_RPAREN      &kp HOME       &kp END     &kp LS(LT)   &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &kp JP_LBRACKET  &kp JP_RBRACKET    &trans         &trans      &kp TAB      &kp JP_YEN
-&none          &kp KP_NUMLOCK  &bootloader    &bt BT_CLR     &kp JP_LBRACE    &kp JP_RBRACE      &kp DOWN       &kp UP      &kp LS(TAB)  &kp JP_BACKQUOTE
-                               &trans                        &trans           &trans             &kp JP_HANZEN  &kp ESCAPE
+&trans         &trans         &trans         &trans         &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &kp LS(BACKSLASH)    &kp HOME  &kp END  &kp LS(LT)     &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &kp AMPERSAND        &kp A     &kp A    &kp BACKSLASH  &trans
+&none          &none          &none          &bt BT_CLR     &bootloader    &none                &kp DOWN  &kp UP   &kp LS(TAB)    &trans
+                              &trans                        &trans         &trans               &trans    &trans
             >;
         };
 
         Control_Layer {
             bindings = <
 &trans          &trans
-&trans          &trans          &trans              &trans              &trans
-&kp HOME        &kp UP_ARROW    &kp END             &none               &kp LC(LS(ESC))      &trans                     &trans          &trans  &trans  &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LS(UP_ARROW)    &kp LC(SLASH)        &kp LANG_ZENKAKUHANKAKU    &trans          &trans  &trans  &trans
-&none           &kp LS(LG(S))   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans                     &kp KP_NUMLOCK  &trans  &trans  &trans
-                                &trans                                  &trans               &trans                     &trans          &trans
+&trans          &trans          &trans           &trans                  &trans
+&kp HOME        &kp UP_ARROW    &kp END          &kp ESCAPE              &kp LC(LS(ESC))  &trans                     &trans          &trans  &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(LC(UP_ARROW))    &kp LC(SLASH)    &kp LANG_ZENKAKUHANKAKU    &trans          &trans  &trans  &trans
+&none           &mkp MB4        &kp DELETE       &kp LC(LA(DOWN_ARROW))  &kp LS(LG(S))    &trans                     &kp KP_NUMLOCK  &trans  &trans  &trans
+                                &trans                                   &trans           &trans                     &trans          &trans
             >;
         };
     };
