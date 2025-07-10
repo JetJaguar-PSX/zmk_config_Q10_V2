@@ -85,10 +85,10 @@
             bindings = <
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp JP_CARET    &kp JP_UNDERSCORE  &kp MINUS   &kp JP_DQUOTE  &kp JP_QUOTE
-&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_AT   &kp HASH       &trans
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCL        &kp COMMA          &kp PERIOD  &kp DOLLAR     &trans
-                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &kp KP_DOT      &kp LS(LG(S))      &kp DELETE
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp JP_CARET    &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
+&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_QUOTE  &kp JP_DQUOTE  &trans
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCL        &kp COMMA          &kp PERIOD    &kp DOLLAR     &trans
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &kp KP_DOT      &kp JP_TILDE       &trans
             >;
         };
 
@@ -96,10 +96,10 @@
             bindings = <
 &trans         &trans
 &trans         &trans         &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &kp LS(BACKSLASH)    &kp HOME  &kp END  &kp LS(LT)     &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &kp AMPERSAND        &kp A     &kp A    &kp BACKSLASH  &trans
-&none          &none          &none          &bt BT_CLR     &bootloader    &none                &kp DOWN  &kp UP   &kp LS(TAB)    &trans
-                              &trans                        &trans         &trans               &trans    &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &kp JP_PIPE       &kp JP_LPAREN    &kp JP_RPAREN    &kp LS(LT)        &kp LS(GT)
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp BACKSLASH     &trans
+&none          &none          &none          &bt BT_CLR     &bootloader    &none             &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_BACKQUOTE  &trans
+                              &trans                        &trans         &trans            &trans           &trans
             >;
         };
 
