@@ -108,11 +108,11 @@
         Control_Layer {
             bindings = <
 &trans          &trans
-&trans          &trans          &trans           &trans                  &trans
-&kp HOME        &kp UP_ARROW    &kp END          &kp ESCAPE              &kp LC(LS(ESC))  &trans           &trans          &trans  &trans  &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(LC(UP_ARROW))    &kp LC(SLASH)    &kp JP_HANZEN    &trans          &trans  &trans  &trans
-&none           &mkp MB4        &kp DELETE       &kp LC(LA(DOWN_ARROW))  &kp LS(LG(S))    &trans           &kp KP_NUMLOCK  &trans  &trans  &trans
-                                &trans                                   &trans           &trans           &trans          &trans
+&trans          &trans          &trans           &trans                &trans
+&kp HOME        &kp UP_ARROW    &kp END          &kp ESCAPE            &kp LC(LS(ESC))  &trans           &trans          &trans  &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(LC(LEFT_WIN))  &kp LC(SLASH)    &kp JP_HANZEN    &trans          &trans  &trans  &trans
+&none           &mkp MB4        &kp DELETE       &mkp MB5              &kp LS(LG(S))    &trans           &kp KP_NUMLOCK  &trans  &trans  &trans
+                                &trans                                 &trans           &trans           &trans          &trans
             >;
         };
     };
