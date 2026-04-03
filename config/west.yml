@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ZitaoTech
       url-base: https://github.com/ZitaoTech
+    - name: JetJaguar-PSX
+      url-base: https://github.com/JetJaguar-PSX
   projects:
     - name: zmk
-      remote: ZitaoTech
-      revision: bbkeyboards_q10_9983
+      remote: JetJaguar-PSX
+      revision: dev/shiitake/bbq10
       import: app/west.yml
   self:
     path: config
