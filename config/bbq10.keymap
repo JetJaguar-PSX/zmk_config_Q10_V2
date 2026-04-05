@@ -74,7 +74,7 @@
 
         default_layer {
             bindings = <
-&none      &none
+&mkp RCLK  &mo 3
 &mkp LCLK  &mt LG(TAB) K_BACK  &mkp LCLK  &kp LS(CAPS)  &lt 2 LANG_ZENKAKUHANKAKU
 &kp Q      &kp W               &kp E      &kp R         &kp T                      &kp Y    &kp U    &kp I      &kp O      &kp P
 &kp A      &kp S               &kp D      &kp F         &kp G                      &kp H    &kp J    &kp K      &kp L      &kp BACKSPACE
@@ -87,32 +87,32 @@
             bindings = <
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp KP_EQUAL    &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp GRAVE       &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_QUOTE  &kp JP_DQUOTE  &kp BACKSLASH
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCL        &kp COMMA          &kp PERIOD    &kp DOLLAR     &none
                                   &kp KP_EQUAL                      &kp KP_NUMBER_0  &none           &kp JP_TILDE       &trans
             >;
         };
 
-        Sub_Layer {
-            bindings = <
-&trans         &trans
-&trans         &trans         &trans         &trans         &trans
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp JP_LPAREN    &kp JP_RPAREN    &kp LS(LT)        &kp LS(GT)
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp JP_LBRACKET  &kp JP_RBRACKET  &kp BACKSLASH     &trans
-&none          &none          &none          &bt BT_CLR     &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp KP_NUMLOCK   &kp JP_RBRACE    &kp JP_BACKQUOTE  &trans
-                              &trans                        &trans                &trans                   &trans           &trans
-            >;
-        };
-
         Control_Layer {
             bindings = <
 &trans          &trans
-&trans          &trans          &trans           &trans                &trans
-&kp HOME        &kp UP_ARROW    &kp END          &kp ESCAPE            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans          &trans  &trans  &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(LC(LEFT_WIN))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans          &trans  &trans  &trans
-&none           &mkp MB4        &kp DELETE       &mkp MB5              &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp KP_NUMLOCK  &trans  &trans  &trans
-                                &trans                                 &trans                &trans                   &trans          &trans
+&bt BT_SEL 0    &bt BT_SEL 1    &none            &trans  &trans
+&kp HOME        &kp UP_ARROW    &kp END          &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans          &trans            &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp LESS_THAN   &kp GREATER_THAN  &trans  &trans
+&none           &none           &none            &none   &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp KP_NUMLOCK  &trans            &trans  &trans
+                                &trans                   &trans                &trans                   &trans          &trans
+            >;
+        };
+
+        BT_Layer {
+            bindings = <
+&trans         &trans
+&trans         &trans         &trans         &trans         &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none          &none   &none   &none  &none
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none          &none   &none   &none  &none
+&none          &none          &none          &bt BT_CLR     &none          &bootloader    &none   &none   &none  &none
+                              &trans                        &trans         &trans         &trans  &trans
             >;
         };
     };
