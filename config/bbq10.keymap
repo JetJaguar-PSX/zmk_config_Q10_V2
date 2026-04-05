@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 // #include <dt-bindings/zmk/pointing.h>
 
@@ -87,10 +86,10 @@
             bindings = <
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp GRAVE       &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &none           &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON    &kp SEMICOLON      &kp JP_QUOTE  &kp JP_DQUOTE  &kp BACKSLASH
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCL        &kp COMMA          &kp PERIOD    &kp DOLLAR     &none
-                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &none           &kp JP_TILDE       &trans
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp JP_TILDE    &kp COMMA          &kp PERIOD    &kp DOLLAR     &kp JP_BACKQUOTE
+                                  &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &trans             &trans
             >;
         };
 
@@ -98,9 +97,9 @@
             bindings = <
 &trans          &trans
 &bt BT_SEL 0    &bt BT_SEL 1    &none            &trans  &trans
-&kp HOME        &kp UP_ARROW    &kp END          &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans          &trans            &trans  &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp LESS_THAN   &kp GREATER_THAN  &trans  &trans
-&none           &none           &none            &none   &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp KP_NUMLOCK  &trans            &trans  &trans
+&kp HOME        &kp UP_ARROW    &kp END          &kp JP_PIPE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans          &trans            &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp JP_AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp LESS_THAN   &kp GREATER_THAN  &trans  &trans
+&none           &none           &none            &kp JP_CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp KP_NUMLOCK  &trans            &trans  &trans
                                 &trans                   &trans                &trans                   &trans          &trans
             >;
         };
