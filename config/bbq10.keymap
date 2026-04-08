@@ -87,7 +87,7 @@
 &trans           &trans
 &trans           &trans           &trans           &trans           &trans
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp JP_TILDE     &kp JP_UNDERSCORE  &kp MINUS     &kp HASH       &kp JP_AT
-&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON     &kp SEMICOLON      &kp JP_QUOTE  &kp JP_DQUOTE  &kp NON_US_BACKSLASH
+&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH     &kp JP_COLON     &kp SEMICOLON      &kp JP_QUOTE  &kp JP_DQUOTE  &kp INTERNATIONAL_3
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp QUESTION     &kp EXCLAMATION  &kp COMMA          &kp PERIOD    &kp DOLLAR     &kp JP_BACKQUOTE
                                   &kp KP_EQUAL                      &kp KP_NUMBER_0  &trans          &trans             &trans
             >;
